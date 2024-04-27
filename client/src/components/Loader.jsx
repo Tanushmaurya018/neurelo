@@ -7,7 +7,7 @@ const Loader = () => {
      bg-black backdrop-blur-sm  bg-opacity-70"
     >
       <div className="grayscale flex justify-center items-center flex-col gap-20">
-        <h1 className="text-5xl text-gray-900">Website's running slowly due to free server</h1>
+        <h1 className="text-2xl text-center p-10 sm:text-5xl text-gray-200">Website's running slowly due to free server</h1>
 
         <img src={bufferGif} className="bg-cover h-[100px]"></img>
       </div>
