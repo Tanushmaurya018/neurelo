@@ -1,12 +1,13 @@
-# JuniorLearnLink Project
+# JuniorLearnLink Project using Neurelo
 
-Welcome to our Google Solution Challenge project! 
-🎓 This MERN stack project with Firebase for authentication and storage, along with Redux for state management, is designed to connect seniors with juniors for resource sharing and mentorship.
+🎓 This MERN stack project with Neurelo API ,Firebase for authentication and storage, along with Redux for state management, is designed to connect seniors with juniors for resource sharing and mentorship.
 
-Live Link : https://googlesolnchallenge.onrender.com
-Youtube Video : https://youtu.be/EOYsJEOT3fc
+Live Link : 
+Youtube Video : 
 
 # Features
+
+It uses neurelo API for CRUD operation related to listings. 
 
 User Authentication: Secure Firebase authentication to ensure user data privacy.
 
@@ -19,21 +20,9 @@ Storage Integration: Firebase storage allows seamless uploading and sharing of f
 # Tech Stack
 
 MERN Stack:
-
-MongoDB: Database for storing user and resource information.
-Express.js: Backend framework for building RESTful APIs.
-React: Frontend library for building dynamic user interfaces.
-Node.js: JavaScript runtime for server-side development.
-Firebase:
-
-Authentication: Secure user authentication.
-Storage: Effortless file storage and sharing.
-Redux:
-
-State Management: Efficiently manage and share application state.
-
-# Contributing
-
-We welcome contributions! If you have ideas for improvements, feel free to submit a pull request.
-
-Happy coding! 🚀
+Neurelo
+MongoDB
+Express.js
+React
+Node.js
+Firebase
