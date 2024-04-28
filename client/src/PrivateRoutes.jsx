@@ -12,7 +12,7 @@ export default function PrivateRoutes() {
 
     return (
         <>
-            {user?.currentUser ? <Outlet  /> : <Navigate to="/login" />};
+            {user?.currentUser?.userWoPassword?._id ? <Outlet  /> : <Navigate to="/login" />};
         </>
 
     )

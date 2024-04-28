@@ -27,13 +27,13 @@ function App() {
           <Route path="/profile" element={<Profile />}></Route>
           <Route path="/createlisting" element={<CreateListing />}></Route>
           <Route path="/editlist/:listId" element={<EditList />}></Route>
+          <Route path="/listing/:listId" element={<Listing />}></Route>
         </Route>
 
         <Route path="/" element={<Home />}></Route>
         <Route path="login" element={<Login />}></Route>
         <Route path="/signup" element={<Signup />}></Route>
         <Route path="/about" element={<About />}></Route>
-        <Route path="/listing/:listId" element={<Listing />}></Route>
         <Route path="/search" element={<Search />}></Route>
 
       </Routes>
