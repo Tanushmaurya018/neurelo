@@ -29,13 +29,19 @@ const Listing = () => {
     const fetchData = async () => {
       setLoading(true);
       try {
-        const response = await axios.get(`https://us-west-2.aws.neurelo.com/rest/listings/${listId}`, {
+        const response1 = await axios.get(`https://us-west-2.aws.neurelo.com/rest/listings/${listId}`, {
           headers: {
             'X-API-KEY': 'neurelo_9wKFBp874Z5xFw6ZCfvhXeGq7u9wcG3qNdLNqOo74C2F+LaH4cKx5ezPFu3dmeypd/4F3jjta4A6j/SgznzPOKrewIWDKc3fxjZAYml6VOsM/KmdMvFTDsGLYSYIPXYN5GAr+pNwXY/tGwKZJgF91YaQ6fFs+eCSqWnA9Ruc9uoHovTTJ4vPu7DjQBeodwa/_U1hSf3yW6S65HVizNvIHNALadYaxu0Of4ZX6dfooXH4='
           }
         });
-        setList(response.data.data);
-        setUser(response.data.userWoPassword);
+        const a=response1.data.data.author;
+        const response2 = await axios.get(`https://us-west-2.aws.neurelo.com/rest/users/${a}`, {
+          headers: {
+            'X-API-KEY': 'neurelo_9wKFBp874Z5xFw6ZCfvhXeGq7u9wcG3qNdLNqOo74C2F+LaH4cKx5ezPFu3dmeypd/4F3jjta4A6j/SgznzPOKrewIWDKc3fxjZAYml6VOsM/KmdMvFTDsGLYSYIPXYN5GAr+pNwXY/tGwKZJgF91YaQ6fFs+eCSqWnA9Ruc9uoHovTTJ4vPu7DjQBeodwa/_U1hSf3yW6S65HVizNvIHNALadYaxu0Of4ZX6dfooXH4='
+          }
+        });
+        setList(response1.data.data);
+        setUser(response2.data.data);
         setLoading(false);
       } catch (error) {
         console.log(error);
@@ -43,6 +49,8 @@ const Listing = () => {
     };
     fetchData();
   }, []);
+  console.log(user)
+  console.log("list")
   return (
     <div className="transition-all  text-gray-300 ease-linear container mx-auto overflow-hidden min-h-[100vh]">
       {loading ? <Loader/> 
@@ -120,7 +128,7 @@ const Listing = () => {
                       onChange={handleTextareaChange}
                     ></textarea>
                     <a
-                      href={`mailto:${user?.email}?subject=Query Regarding Your Estate&body=${message}`}
+                      href={`mailto:${user?.email}?subject=Query Regarding Your Course&body=${message}`}
                     >
                       <button className="w-full bg-gray-900 text-white px-4 py-2 rounded-full">
                         Contact

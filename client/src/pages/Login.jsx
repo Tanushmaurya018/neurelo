@@ -85,7 +85,7 @@ const Login = () => {
                 required
               ></input>
               <input
-                type="text"
+                type="password"
                 name="password"
                 placeholder="Password"
                 value={userData.password}

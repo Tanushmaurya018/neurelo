@@ -79,7 +79,7 @@ transition-colors duration-500 hover:"
                 required
               ></input>
               <input
-                type="text"
+                type="password"
                 name="password"
                 placeholder="Password"
                 value={userData.password}
